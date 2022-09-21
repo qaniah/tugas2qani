@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":1,
+        "fields":{
+            "watched": "True",
+            "title": "Ponyo",
+            "rating": "5",
+            "release_date": "1 July 2017",
+            "review": "it's cute! comfort movie"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":2,
+        "fields":{
+            "watched": "True",
+            "title": "Clueless",
+            "rating": "4",
+            "release_date": "19 July 1995",
+            "review": "love the fits"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":3,
+        "fields":{
+            "watched": "True",
+            "title": "The Con-Heartist",
+            "rating": "4.8",
+            "release_date": "24 February 2021",
+            "review": "cool gonna re-watch it"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":4,
+        "fields":{
+            "watched":"True",
+            "title":"Forgotten",
+            "rating": "4.9",
+            "release_date": "29 November 2017",
+            "review": "goosebumps. got me ???"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":5,
+        "fields":{
+            "watched":"True",
+            "title":"Extreme Job",
+            "rating": "4.5",
+            "release_date": "20 February 2019",
+            "review": "funny"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":6,
+        "fields":{
+            "watched":"True",
+            "title":"Now You See Me",
+            "rating": "4.5",
+            "release_date": "31 May 2013",
+            "review": "magic and stuffs"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":7,
+        "fields":{
+            "watched":"True",
+            "title":"A Whisker Away",
+            "rating": "5",
+            "release_date": "18 June 2020",
+            "review": "cats. i cried"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":8,
+        "fields":{
+            "watched":"True",
+            "title":"The Devil Wears Prada",
+            "rating": "4.4",
+            "release_date": "30 June 2006",
+            "review": "her boyfriend was the villain imo"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":9,
+        "fields":{
+            "watched":"True",
+            "title":"Mencuri Raden Saleh",
+            "rating": "5",
+            "release_date": "25 August 2022",
+            "review": "one of the best indonesian movie!"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":10,
+        "fields":{
+            "watched":"True",
+            "title":"Aladdin",
+            "rating": "4.5",
+            "release_date": "24 May 2019",
+            "review": "coolest live-action"
+        }
+    }
+]
