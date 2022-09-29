@@ -17,16 +17,16 @@ Pertama-tama browser akan membuat HTTP Request, method, dan argumen yang diterim
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Dengan command python3 manage.py startapp todolist kemudian juga menaruh todolist di INSTALLED_APPS pada settings.py yang ada di project_django.
 2. Menambahkan path('todolist/', include('todolist.urls')), di urlpatterns pada urls.py di project_django dan path('', show_todolist, name='show_todolist'), di urlpatterns pada urls.py yang dibuat di folder todolist.
-3. Membuat model Task pada models.py dengan kode sebagai berikut
+3. Membuat model Task pada models.py dengan kode sebagai berikut:
 ```python
     class Task(models.Model):
-    user = models.ForeignKey(
-        User, 
-        on_delete=models.CASCADE,
-    )
-    date = models.DateField()
-    title = models.CharField(max_length=250)
-    description = models.TextField()
+        user = models.ForeignKey(
+            User, 
+            on_delete=models.CASCADE,
+        )
+        date = models.DateField()
+        title = models.CharField(max_length=250)
+        description = models.TextField()
 ```
 4. Menaruh kode-kode fungsi registrasi, login, dan logout sesuai dengan tutorial 3 pada views.py di folder todolist. Tidak lupa menaruh @login_required(login_url='/todolist/login/') di atas fungsi show_todolist agar diperlukan login ketika mengakses halaman.
 5. Membuatnya pada todolist.html sesuai dengan tampilan yang diminta yaitu memuat username pengguna, tombol Tambah Task Baru, tombol logout, serta tabel berisi tanggal pembuatan task, judul task, dan deskripsi task.
@@ -34,5 +34,7 @@ Pertama-tama browser akan membuat HTTP Request, method, dan argumen yang diterim
 7. Menaruh path-pathnya pada urlpatterns yang ada di urls.py pada folder todolist.
 8. Dengan hanya melakukan add, commit, dan push akan otomatis ter-deploy karena sebelumnya telah dilakukan deploy pada repository ini.
 9. Akun-akunnya yaitu:
+```
 Username: qani  Password: ayatoxiao
 Username: jennie  Password: blackpink
+```
