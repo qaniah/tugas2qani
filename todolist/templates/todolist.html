@@ -1,27 +1,39 @@
 {% extends 'base.html' %}
 
  {% block content %}
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Todolist</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   </head>
+   <body class="vh-100" style="background-color: #ffe9f4;">
+    <nav class="navbar navbar-expand-lg"style="background-color: #ffe9f4;">
+      <div class="container-fluid">
+        <img src="https://media.discordapp.net/attachments/871745162802511933/1024974315051024424/6207a59626ab99000460a364.png?width=529&height=529" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        <a class="navbar-brand">✩ Here is {{user}}'s todolist! ✩</a>
+        <button class="btn btn-secondary"><a href="{% url 'todolist:logout' %}" style="color: #fff; text-decoration: none;">Logout</a></button>
+      </div>
+    </nav>
 
-  <h1>Todolist</h1>
-
-  <h2>Here is {{user}}'s todolist!</h2>
-
-  <button><a href="{% url 'todolist:show_createtask' %}">Tambah Task Baru</a></button>
-  <table>
-    <tr>
-      <th>Date Created</th>
-      <th>Title</th>
-      <th>Description</th>
-    </tr>
+    <button class="btn btn-secondary"><a href="{% url 'todolist:show_createtask' %}" style="color: #fff; text-decoration: none;">Add New Task</a></button>
     {% for todo in list_todo %}
-        <tr>
-            <td>{{todo.date}}</td>
-            <td>{{todo.title}}</td>
-            <td>{{todo.description}}</td>
-        </tr>
-    {% endfor %}
-</table>
-<h5>Sesi terakhir login: {{ last_login }}</h5>
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+      <div class="card" style="width: 18rem;">
+       
+        <div class="card-body">
+          <h5 class="card-title">{{todo.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Date Created: {{todo.date}}</h6>
+          <p class="card-text">{{todo.description}}</p>
+        </div>
+        
+      </div>
+      {% endfor %}
+    
+    <h5>Last login session: {{ last_login }}</h5>
+  </body>
+</html>
+
 
 {% endblock content %}
