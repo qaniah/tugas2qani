@@ -3,21 +3,21 @@
 ### Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 #### Perbedaan
 Inline CSS kodenya ditulis langsung pada atribut elemen HTML. Inline CSS ditulis pada setiap elemen HTML yang memiliki atribut style. Inline CSS digunakan hanya untuk mengubah satu elemen saja.
-Internal CSS kodenya ditulis dalam tag <style> dan kode HTML ditulis pada header file HTML. Jika menggunakan internal CSS, tampilannya pada satu halaman website saja tidak digunakan pada halaman website yang lain. Dengan begitu, internal CSS cocok digunakan ketika ingin membuat halaman web dengan dengan tampilan yang berbeda pada setiap halaman websitenya.
-External CSS kodenya ditulis terpisah dengan kode HTML. Terdapat file khusus yang berekstensi .css untuk menggunakan external CSS. File external ini diletakkan setelah bagian <head> pada halaman.
-##### Kelebihan dan kekurangan
-###### Inline
+Internal CSS kodenya ditulis dalam tag `<style>` dan kode HTML ditulis pada header file HTML. Jika menggunakan internal CSS, tampilannya pada satu halaman website saja tidak digunakan pada halaman website yang lain. Dengan begitu, internal CSS cocok digunakan ketika ingin membuat halaman web dengan dengan tampilan yang berbeda pada setiap halaman websitenya.
+External CSS kodenya ditulis terpisah dengan kode HTML. Terdapat file khusus yang berekstensi .css untuk menggunakan external CSS. File external ini diletakkan setelah bagian `<head>` pada halaman.
+#### Kelebihan dan kekurangan
+##### Inline
 Kelebihan: Berguna untuk memperbaiki kode dengan cepat, proses load website lebih cepat, berguna ketika hanya ingin menguji dan melihat perubahan pada satu elemen.
 Kekurangan: Tidak efisien karena hanya dapat diterapkan pada satu elemen HTML.
-###### Internal
+##### Internal
 Kelebihan: Perubahannya hanya pada satu halaman saja, HTML dan CSS ada di satu file jadi tidak perlu melakukan upload beberapa file, internal stylesheet dapat menggunakan class dan ID.
 Kekurangan: Tidak efisien ketika ingin menggunakan CSS yang sama pada beberapa file, load website lama. 
-###### External
+##### External
 Kelebihan: Dapat digunakan di beberapa halaman web sekaligus, proses load website lebih cepat, ukuran file HTML menjadi lebih kecil.
 Kekurangan: Ketika CSS gagal dipanggil oleh file HTML halaman akan menjadi berantakan.
 
 ### Jelaskan tag HTML5 yang kamu ketahui.
-Tag HTML5 yang saya tau yaitu <! DOCTYPE> untuk mendefinisikan dokumennya, <html> untuk membuat halaman html, <head> untuk mendefinisikan informasi import CSS, import font, dan lain-lain, <title> untuk membuat judul pada suatu halaman, <body> untuk membuat bagian tubuh pada suatu halaman, <h1> to <h6> untuk membuat heading pada suatu halaman, <p> untuk membuat teks ukuran default pada suatu halaman, <div> untuk merepresentasikan suatu section, <table> untuk membuat table pada halaman, <button> untuk membuat tombol pada suatu halaman, <nav> untuk membuat navigation bar pada suatu halaman, dan masih banyak lagi tag lainnya.
+Tag HTML5 yang saya tau yaitu `<! DOCTYPE>` untuk mendefinisikan dokumennya, `<html>` untuk membuat halaman html, `<head>` untuk mendefinisikan informasi import CSS, import font, dan lain-lain, `<title>` untuk membuat judul pada suatu halaman, `<body>` untuk membuat bagian tubuh pada suatu halaman, `<h1> to <h6>` untuk membuat heading pada suatu halaman, `<p>` untuk membuat teks ukuran default pada suatu halaman, `<div>` untuk merepresentasikan suatu section, `<table>` untuk membuat table pada halaman, `<button>` untuk membuat tombol pada suatu halaman, `<nav>` untuk membuat navigation bar pada suatu halaman, dan masih banyak lagi tag lainnya.
 
 ### Jelaskan tipe-tipe CSS selector yang kamu ketahui.
 Tipe CSS selector yang saya tau yaitu selector class yang ditulis dengan "." di depannya. Selector ini memilih elemen berdasarkan nama class yang diberikan. Lalu Selector ID yang ditulis dengan "#" di depannya. Selector ID ini bersifat unik dan hanya dapat digunakan pada satu elemen saja. Kemudian selector element yang ditulis disesuaikan dengan tag HTML yang ingin diberi style, tidak menggunakan "." maupun "#".
