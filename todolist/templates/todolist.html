@@ -17,21 +17,25 @@
         <button class="btn btn-secondary"><a href="{% url 'todolist:logout' %}" style="color: #fff; text-decoration: none;">Logout</a></button>
       </div>
     </nav>
-
+    <div class="container-fluid">
+    <div class="col-md-8 my-3">
     <button class="btn btn-secondary"><a href="{% url 'todolist:show_createtask' %}" style="color: #fff; text-decoration: none;">Add New Task</a></button>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for todo in list_todo %}
-      <div class="card" style="width: 18rem;">
-       
+      <div class="col">
+        <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{todo.title}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">Date Created: {{todo.date}}</h6>
           <p class="card-text">{{todo.description}}</p>
         </div>
-        
+        </div>
       </div>
       {% endfor %}
-    
-    <h5>Last login session: {{ last_login }}</h5>
+    </div>  
+    <h6>Last login session: {{ last_login }}</h6>
+    </div>
   </body>
 </html>
 
