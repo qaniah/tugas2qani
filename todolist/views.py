@@ -1,4 +1,6 @@
 import datetime
+from django.http import HttpResponse
+from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -9,6 +11,8 @@ from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from todolist.models import Task
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -70,3 +74,18 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return redirect('todolist:login')
+
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+
+@csrf_exempt
+def add_task(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        task = Task.objects.create(title=title, description=description,date=datetime.date.today(), user=request.user)
+
+        result = {'fields':{'title':task.title,'description':task.description, 'date':task.date,},'pk':task.pk}
+        return JsonResponse(result)
